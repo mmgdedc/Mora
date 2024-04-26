@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    margin: 4px 4px 0 4px;
+    display: flex;
+    width: 100%;
+}
+
+.activity{
+    margin: 0px 4px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.player{
+    width: 50%;
+}
+.robot{
+    width: 50%;
+}
+
+.profile .player{
+    box-shadow: inset -1.5px 0 5px 0.1px aquamarine;
+    padding: 5px 5px 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.profile > .player > .btn-group{
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-group_rock{
+    font-size:36px;
+    padding:0px 46px;
+    margin-bottom: 2px;
+
+    flex: none;
+    height: fit-content;
+    width: fit-content;
+}
+.btn-group_scissors{
+    font-size:36px;
+    padding:0px 48.5px;
+    margin-bottom: 2px;
+
+    flex: none;
+    height: fit-content;
+    width: fit-content;
+}
+.btn-group_paper{
+    font-size:36px;
+    padding:0px 42px;
+
+    flex: none;
+    height: fit-content;
+    width: fit-content;
+}
+.player_avatar{
+    font-size: 100px;
+}
+
+.profile .robot{
+    box-shadow: inset 1px 0 5px 0.1px gold;
+    padding: 6px 0 0 5px;
+}
+.robot > .robot_avatar{
+    margin-left: 8px;
+}
+figcaption > .robot_nickname{
+    font-size: 43px;
+    vertical-align: top;
+}
+
+.activity > .player{
+    box-shadow: inset -1px 0 5px 0.1px aquamarine;
+    text-align: left;
+}
+.activity > .player > .btn-group-small{
+    display: none;
+}
+.activity > .robot{
+    box-shadow: inset 1px 0 5px 0.1px gold;
+    text-align: right;
+}
+
+.player > .results{
+    text-align: center;
+    position: relative;
+    top: 5.2%;
+    float: right;
+}
+
+
+
+@media screen and (max-width: 1160px) {
+    .profile > .player > .btn-group{
+        display: block;
+    }
+    .btn-group_rock{
+        display: block;
+    }
+    .btn-group_scissors{
+        display: block;
+    }
+    .btn-group_paper{
+        display: block;
+    }
+    figcaption > .robot_nickname{
+        font-size: 33px;
+    }
+}
+
+
+
+@media screen and (max-width: 540px){
+    .profile .player{
+        display: block;
+        text-align: center;
+    }
+    .profile > .player > .btn-group{
+        display: none;
+    }
+    .activity > .robot{
+        text-align: center;
+    }
+    .activity > .player{
+        text-align: center;
+        align-content: space-between;
+    }
+    .activity > .player > .btn-group-small{
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-around;
+    }
+    .btn-group_rock{
+        font-size:26px;
+        padding:0px 10px;
+    }
+    .btn-group_scissors{
+        font-size:26px;
+        padding:0px 10px;
+    }
+    .btn-group_paper{
+        font-size:26px;
+        padding:0px 8px;
+    }
+
+    .profile .robot{
+        display: block;
+        text-align: center;
+        align-content: center;
+    }
+    figcaption > .robot_nickname{
+        font-size: 23px;
+    }
+    .robot > .robot_finger{
+        margin-top: 35%;
+    }
+}
+
+
+
+.robot_finger{
+  display: inline-block;
+  width: fit-content;
+  margin-top: 11%;
+}
+.robot_finger::after{
+  content: "\2601";
+  color: gainsboro;
+  font-size: 55px;
+}
+.robot_finger-rock::after{
+  content: "\270A";
+  font-size: 40px;
+}
+.robot_finger-scissors::after{
+  content: "\270C";
+  font-size: 40px;
+}
+.robot_finger-paper::after{
+  content: "\1F590";
+  font-size: 40px;
+}
+
+
+
+.player_finger{
+  display: inline-block;
+  width: fit-content;
+  margin-top: 10%;
+}
+.player_finger::after{
+  content: "\270A";
+  font-size: 40px;
+}
+.player_finger-rock::after{
+  content: "\270A";
+  font-size: 40px;
+}
+.player_finger-scissors::after{
+  content: "\270C";
+  font-size: 40px;
+}
+.player_finger-paper::after{
+  content: "\1F590";
+  font-size: 40px;
+}

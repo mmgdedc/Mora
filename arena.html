@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena</title>
+    <link rel="stylesheet" href="arena.css">
+</head>
+<body>
+    <div class="profile">
+        <div class="player">
+            <div class="btn-group">
+                <button id="btnRock" class="btn-group_rock" onclick="mora('rock')"><i>&#9994;</i></button>
+                <button id="btnScissors" class="btn-group_scissors" onclick="mora('scissors')">&#9996;</button>
+                <button id="btnPaper" class="btn-group_paper" onclick="mora('paper')">&#128400;</button>
+            </div>
+            <span class="player_avatar">&#129464;</span>
+        </div>
+        <div class="robot">
+            <figure>
+                <img class="robot_avatar" id="botImg" src="images/robot-avatar.jpg" width="120px">
+                <figcaption><strong class="robot_nickname" id="botName">Kung Goo</strong></figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="activity">
+        <div class="player">
+            <div id="btnGroup_sm" class="btn-group-small">
+                <button id="btnRock_sm" class="btn-group_rock" onclick="mora('rock')"><i>&#9994;</i></button>
+                <button id="btnScissors_sm" class="btn-group_scissors" onclick="mora('scissors')">&#9996;</button>
+                <button id="btnPaper_sm" class="btn-group_paper" onclick="mora('paper')">&#128400;</button>
+            </div>
+            <span id="user" class="player_finger"></span>
+            <div class="results">
+                <canvas id="results_canvas" width="400" height="70">canvas</canvas>
+            </div>
+        </div>
+        <div class="robot">
+            <span id="machine" class="robot_finger"></span>
+        </div>
+    </div>
+
+    <script src="arena.js"></script>
+</body>
+</html>

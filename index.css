@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.webName{
+    text-align: center;
+}
+.robotList{
+    width: 960px;
+    background-color: antiquewhite;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.robot{
+    width: 300px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin: 0 10px 10px;
+}
+.robot > .robot_avatar{
+    width: 100%;
+}
+.robot > .robot_name{
+    text-align: center;
+}
+.robot-passive{
+    width: 300px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin: 0 10px 10px;
+    background-color: gainsboro;
+    opacity: 0.4;
+}
+.robot-passive > .robot_avatar{
+    opacity: 0.2;
+}
+.robot-passive > .robot_name{
+    color: gainsboro;
+    opacity: 0;
+}
+:modal{
+    background-color: violet;
+    border: 2px solid red;
+    border-radius: 6px;
+    margin: auto;
+    padding: 20px 15px 15px 15px;
+}
+.btnGroup{
+    width: fit-content;
+    margin: auto;
+}
+.btnGroup_btn{
+    margin: 15px 8px 5px;
+    padding: 1px 2px;
+}
+::backdrop{
+    opacity: 1;
+}
+
+@media screen and (max-width: 540px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .robotList{
+        display: block;
+        width: 90%;
+        background-color: unset;
+    }
+    .robot{
+        width: 100%;
+        display: flex;
+        background-color: aliceblue;
+        margin: 0px 10px 10px 10px;
+    }
+    .robot-passive{
+        width: 100%;
+        display: flex;
+        margin: 0 10px 10px 10px;
+        background-color: aliceblue;
+    }
+    .robot > .robot_avatar{
+        width: 50%;
+    }
+    .robot > .robot_name{
+        display: inline-block;
+        margin: auto;
+    }
+}
