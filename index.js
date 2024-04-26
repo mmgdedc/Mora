@@ -10,6 +10,7 @@ const Key = {
     get onArena(){ return "is arena page already opened"; },
 };
 
+
 window.addEventListener('load',()=>{
     var everyOne = sessionStorage.getItem(Key.armyGroup);
     if(everyOne == null){
@@ -19,16 +20,18 @@ window.addEventListener('load',()=>{
     }
 });
 
+
 document.addEventListener('visibilitychange', ()=>{
     if(document.visibilityState === 'visible' && contestants != null){
         setPassiveBot();
     }
 });
 
-/**關閉與重新整理時也都觸發*/
+
 window.addEventListener("beforeunload", (event)=>{
     event.returnValue = "";
 });
+
 
 function onCreate(){
     localStorage.clear();
@@ -36,12 +39,14 @@ function onCreate(){
     fetchSportsmans(randuser);
 }
 
+
 function onResume(everyOne){
     parseSportsmans(everyOne);
     set_layout();
     set_chooseConfirm();
     setPassiveBot();
 }
+
 
 function fetchSportsmans(url){
     if(url == null){
@@ -74,6 +79,7 @@ function fetchSportsmans(url){
     );
 }
 
+
 function parseSportsmans(text){
     contestants = new Array();
     var jsonObj = JSON.parse(text);
@@ -89,8 +95,8 @@ function parseSportsmans(text){
     }
 }
 
+
 function set_layout(){
-    /**都是套用相同style所以使用同classname，依 parent的 child實際數量設定內容*/
     var layout = document.getElementById('layout');
     var robotList = layout.querySelectorAll('.robot');
     for(let i=0; i<robotList.length; i++){
@@ -106,18 +112,20 @@ function set_layout(){
 
 }
 
+
 function pickBotEvent(event){
-    /**設定 dialog內容並顯示*/
     var identify = event.currentTarget.dataset.chassisNo;
     var targetName = document.getElementById('targetName');
     targetName.textContent = contestants.at(identify).name;
     document.getElementById('chooseConfirm').showModal();
 }
 
+
 function set_chooseConfirm(){
     var dialog = document.getElementById('chooseConfirm');
     dialog.addEventListener('close', initiateArena);
 }
+
 
 function initiateArena(event){
     if(event.currentTarget.returnValue != 'ok')
@@ -128,9 +136,9 @@ function initiateArena(event){
     let profile = contestants.at(identify);
     window.localStorage.setItem(Key.img, profile.img);
     window.localStorage.setItem(Key.warrior, profile.name);
-    let onboarded = window.localStorage.getItem(Key.onArena);//arena.htm中設定當 reload of arena.html消失 
+    let onboarded = window.localStorage.getItem(Key.onArena); 
     if(onboarded == null && arenaPage == null){
-        arenaPage = window.open('arena.html', '_blank');//當index.html reload消失
+        arenaPage = window.open('arena.html', '_blank');
         arenaPage.focus();
     }else{
         try{
@@ -155,6 +163,7 @@ function initiateArena(event){
         }
     }
 }
+
 
 function setPassiveBot(){
     var passive = localStorage.getItem(Key.passive);
@@ -203,10 +212,10 @@ function setPassiveBot(){
     }
 }
 
+
 function isMember(element, index, array){
     if(this.length == 1)
         return index == this;
     else
         return element.name == this;
 }
-

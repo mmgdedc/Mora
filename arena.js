@@ -30,13 +30,6 @@ window.addEventListener('load',()=>{
 });
 
 
-/**
- *  window.addEventListener('beforeunload',()=>{
- *  
- *  });
- */
-
-
 function mora(signal){
     var outcome = {
         playerPose: '',
@@ -78,6 +71,7 @@ function mora(signal){
     displayOutCome(outcome);
 }
 
+
 function computerMora(){
     const randNum = Math.floor(Math.random()*10);
     var fingers = randNum % 3;
@@ -96,6 +90,7 @@ function computerMora(){
     }
     return fingers;
 }
+
 
 function displayOutCome(outcome){
 
@@ -132,6 +127,7 @@ function displayOutCome(outcome){
     pickNext(outcome.result);
 }
 
+
 function myTimeLine(){
     const timeline = {
         duration: 2000,
@@ -139,6 +135,7 @@ function myTimeLine(){
     };
     return timeline;
 }
+
 
 function playerMotion(pose){
     var fingerFrame = [
@@ -168,6 +165,7 @@ function playerMotion(pose){
         user.classList = 'player_finger';
     },myTimeLine().duration);
 }
+
 
 function robotMotion(pose){
     var fingerFrame = [
@@ -199,6 +197,7 @@ function robotMotion(pose){
         machine.classList = 'robot_finger';
     },myTimeLine().duration);
 }
+
 
 function pickNext(result){
     setTimeout(()=>{
