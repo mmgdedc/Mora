@@ -6,17 +6,17 @@
     text-align: center;
 }
 .robotList{
-    width: 960px;
-    background-color: antiquewhite;
+    width: 1300px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .robot{
     width: 300px;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    margin: 0 10px 10px;
+    margin-bottom: 10px;
 }
 .robot:hover{
     border: 3px ridge red;
@@ -31,7 +31,7 @@
     width: 300px;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    margin: 0 10px 10px;
+    margin-bottom: 10px;
     background-color: gainsboro;
     opacity: 0.4;
 }

@@ -35,7 +35,7 @@ window.addEventListener("beforeunload", (event)=>{
 
 function onCreate(){
     localStorage.clear();
-    const randuser = 'https://randomuser.me/api/1.4/?format=JSON&page=1&results=10&inc=name,nat,picture&exc=login';
+    const randuser = 'https://randomuser.me/api/1.4/?format=JSON&page=1&results=25&inc=name,nat,picture&exc=login';
     fetchSportsmans(randuser);
 }
 
