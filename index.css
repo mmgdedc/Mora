@@ -36,9 +36,11 @@
     opacity: 0.4;
 }
 .robot-passive > .robot_avatar{
+    width: 100%;
     opacity: 0.2;
 }
 .robot-passive > .robot_name{
+    text-align: center;
     color: gainsboro;
     opacity: 0;
 }

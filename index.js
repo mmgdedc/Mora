@@ -102,7 +102,7 @@ function set_layout(){
     for(let i=0; i<robotList.length; i++){
         let person = contestants.at(i);
         let robot = robotList.item(i);
-        robot.dataset.chassisNo = i;//Identify of robotList member
+        robot.dataset.chassisNo = i;
         robot.addEventListener('click', pickBotEvent);
         let robotImg = robot.firstElementChild;
         let robotH3 = robotImg.nextElementSibling;
@@ -188,7 +188,7 @@ function setPassiveBot(){
         let robotList = layout.querySelectorAll('.robot');
         for(let num of set.values()){
             let robot = robotList.item(num);
-            robot.classList = `robot`;
+            robot.classList.remove('robot', 'robot-passive');
             robot.classList.toggle('robot-passive');
             robot.removeEventListener('click', pickBotEvent);
         }
@@ -205,7 +205,7 @@ function setPassiveBot(){
             let robotList = layout.querySelectorAll('.robot');
             for(let n of set.values()){
                 let robot = robotList.item(n);
-                robot.classList = `robot`;
+                robot.classList.remove('robot', 'robot-passive');
                 robot.classList.toggle('robot-passive');
                 robot.removeEventListener('click', pickBotEvent);
             }
