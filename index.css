@@ -18,6 +18,9 @@
     box-sizing: border-box;
     margin: 0 10px 10px;
 }
+.robot:hover{
+    border: 3px ridge red;
+}
 .robot > .robot_avatar{
     width: 100%;
 }
@@ -38,6 +41,9 @@
 .robot-passive > .robot_name{
     color: gainsboro;
     opacity: 0;
+}
+.robot-passive:hover{
+    border: 1px solid #ddd;
 }
 :modal{
     background-color: violet;
