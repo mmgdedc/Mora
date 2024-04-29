@@ -137,17 +137,18 @@ function initiateArena(event){
     window.localStorage.setItem(Key.img, profile.img);
     window.localStorage.setItem(Key.warrior, profile.name);
     let onboarded = window.localStorage.getItem(Key.onArena); 
+    var https = 'https://html-preview.github.io/?url=https://github.com/mmgdedc/Mora/blob/master/arena.html';
     if(onboarded == null && arenaPage == null){
-        arenaPage = window.open('arena.html', '_blank');
+        arenaPage = window.open( https , '_blank');
         arenaPage.focus();
     }else{
         try{
             if(arenaPage.closed){
-                arenaPage = window.open('arena.html', '_blank');
+                arenaPage = window.open( https , '_blank');
                 arenaPage.focus();
             }else if(!arenaPage.closed){
                 arenaPage.window.close();
-                arenaPage = window.open('arena.html', '_blank');
+                arenaPage = window.open( https , '_blank');
                 arenaPage.focus();
             }
         }catch(error){
