@@ -41,6 +41,7 @@
 }
 .robot-passive > .robot_name{
     text-align: center;
+    min-width: 50%;
     color: gainsboro;
     opacity: 0;
 }
